@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Leya Hatoum</title>
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <label class="menu__hamburger visibilityHidden" for="hamburger"><i class="fas fa-bars"></i></label>
+      <input class="menu__hamburger--hideCheckbox visibilityHidden" type="checkbox" id="hamburger">
+      <ul class="menu__list">
+        <a href="#"><li class="menu__list--item">bio</li></a>
+        <a href="#"><li class="menu__list--item">work</li></a>
+        <a href="#"><li class="menu__list--item">skills</li></a>
+        <a href="#"><li class="menu__list--item">contact</li></a>
+      </ul>
+    </nav>
+    <div>
+      <p>Hello</p>
+      <h1>I'm Leya Hatoum</h1>
+      <h4>Web Developer and Designer</h4>
+      <a class="header__button" href="#">Get CV</a>
+    </div>
+  </header>
+  <main>
+    <section class="bio">
+      <div class="bio--textLayout">
+        <h2>My Bio</h2>
+        <div class="bio__info">
+          <h4>Hi there! <br> I'm Leya Hatoum, welcome to my site.</h4>
+          <p>I'm a Front-End Web Developer and Designer currently based out of Toronto, who likes to understand how things
+            work, and then make them better. My top priorities are accessibility and responsiveness, and that is reflected
+            in all projects I take on. I also have a keen interest in user experience that is supported by my design and
+            communication background.</p>
+        </div>
+      </div>
+      <img class="bio__picture" src="./assets/leyaHatoum.png" alt="Picture of Leya Hatoum">
+    </section>
+    <section class="projects">
+      <h2>Projects</h2>
+      <!-- this div is generated in JS -->
+    </section>
+    <section class="skills">
+      <h2>My Skills</h2>
+      <!-- this skills div is generated in JS -->
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject">
+        <label for="message">Message</label>
+        <input type="text-area" id="message">
+        <label for="submit">Send Message</label>
+        <input type="submit" id="submit">
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__socialMedia">
+      <a href="https://linkedin.com/in/leya-hatoum-404726122/"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/leyahatoum"><i class="fab fa-twitter"></i></a>
+      <a href="https://medium.com/@leyahatoum10"><i class="fab fa-medium-m"></i></a>
+      <a href="https://github.com/LeyaHatoum"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <!-- <script type="module" src="js/projects.js" ></script> -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
