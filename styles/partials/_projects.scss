@@ -7,7 +7,6 @@
 
   &__singleProject {
     @include flexRow();
-    @include wrapper();
 
     &--flip {
       flex-direction: row-reverse;

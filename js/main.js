@@ -82,12 +82,12 @@ projects.map((project, index) => {
   const projectImage = $("<img class='projects__projectImage'>").attr("src", project.image);
   const projectLinks = $("<div class='projects__projectLinks'>").append(projectButtons, projectImage);
   console.log("index", index)
-  const singleProject = $("<div class='projects__singleProject'>").append(projectInfo, projectLinks)
+  const singleProject = $("<div class='projects__singleProject wrapper'>").append(projectInfo, projectLinks)
   index % 2 === 0 ? singleProject.addClass("projects__singleProject--flip") : null ;
   $(".projects").append(singleProject);
 });
 
-const skillList = $("<div class='skills__list'>");
+const skillList = $("<div class='skills__list wrapper'>");
 skills.map(skill => {
   const skillName = $("<h5>").text(skill.name);
   const skillGroup = $("<div class='skills__skill'>").append(skill.icon, skillName);
@@ -115,11 +115,14 @@ $("#home").waypoint(function () {
 })
 
 $(".projects__projectLinks").on("mouseover", function () {
-  console.log("this is what you hovered on", this)
   $(this).children(".projects__projectButtons").removeClass("visibilityHidden")
 })
 
 $(".projects__projectLinks").on("mouseout", function () {
-  console.log("this is what you hovered on", this)
   $(this).children(".projects__projectButtons").addClass("visibilityHidden")
+})
+
+$(".menu__hamburger").on("click", function (){
+  $(".menu__list").toggleClass("menu--show")
+  $(".menu__hamburger").children(".fas").toggleClass("fa-bars").toggleClass("fa-times")
 })

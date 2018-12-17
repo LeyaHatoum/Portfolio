@@ -19,7 +19,7 @@
     <nav class="menu">
       <label class="menu__hamburger visibilityHidden" for="hamburger"><i class="fas fa-bars"></i></label>
       <input class="menu__hamburger--hideCheckbox visibilityHidden" type="checkbox" id="hamburger">
-      <ul class="menu__list">
+      <ul class="menu__list menu--show">
         <!-- <a href="#home"><li id="homeLink" class="menu__list--item">home</li></a> -->
         <a href="#bio"><li id="bioLink" class="menu__list--item">bio</li></a>
         <a href="#projects"><li id="projectsLink" class="menu__list--item">projects</li></a>
@@ -41,7 +41,7 @@
       <a class="header__button" href="#">Get CV</a>
     </div>
   </header>
-  <main id="main">
+  <main id="main wrapper">
     <section id="bio" class="bio"
     >
       <div class="bio--textLayout">
@@ -71,7 +71,7 @@
     </section>
     <section id="contact" class="contact">
       <h2>Contact Me</h2>
-      <form class="form">
+      <form class="form wrapper">
         <div class="form--leftItems">
           <label class="visibilityHidden" for="name">Name</label>
           <input placeholder="Name" type="text" id="name">

@@ -37,14 +37,11 @@ $greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
   align-items: center;
 }
 
-@mixin wrapper (){
-  width: 80%;
-}
-
 //GLOBAL STYLING
 //----------------------------------------------------
 body {
   @include flexColumn();
+  width: 100%;
   background: $white;
   border-left: 40px solid $frame;
   border-right: 40px solid $frame;
@@ -98,4 +95,8 @@ h5 {
 
 p {
   @include bodyFont()
+}
+
+.wrapper {
+  width: 80%;
 }
