@@ -1,0 +1,36 @@
+//SKILLS
+//----------------------------------------------------
+
+.skills {
+  @include flexColumn();
+  height: 100vh;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    @include flexRow();
+    @include wrapper();
+    flex-flow: wrap;
+    border: 2px solid red;
+  }
+
+  &__skill {
+    @include flexColumn();
+    width: 150px;
+    height: 150px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    margin: 10px;
+  }
+
+  i {
+    color: $blueGradient;
+    font-size: 4rem;
+  }
+
+  img {
+    width: 60px;
+  }
+}

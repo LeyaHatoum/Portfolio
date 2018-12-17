@@ -1,0 +1,72 @@
+//CONTACT
+//----------------------------------------------------
+
+.contact {
+  @include flexColumn();
+  justify-content: flex-start;
+  min-height: 500px;
+  background: $frame;
+
+  h2 {
+    color: $frameColor;
+    margin: 30px 0 40px 0;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input {
+    height: 60px;
+    padding-left: 15px;
+    @include bodyFont();
+    font-weight: 700;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  input[type=submit] {
+    background: $primaryGradient;
+    border: none;
+    @include bodyFont();
+    font-weight: 700;
+    color: $white;
+    padding: 0;
+  }
+
+  textarea {
+    @extend input;
+    height: 220px;
+    @include bodyFont();
+    font-weight: 700;
+    padding-top: 15px;
+
+  }
+
+  .form {
+    @include wrapper();
+    @include flexRow();
+    flex-flow: wrap;
+
+    label {
+      @include bodyFont();
+    }
+
+    &--leftItems,
+    &--rightItems {
+      width: calc(50% - 10px);
+    }
+
+    &--leftItems {
+      margin-right: 20px;
+    }
+
+    &--bottom {
+      width: 100%;
+    }
+  }
+}

@@ -5,6 +5,7 @@ $frameColor: #a2a9da;
 $bodyColor: #4d516e;
 $white: #efefef;
 $primaryColor: #3b4888;
+$secondaryColor: #a43c71;
 $primaryGradient: linear-gradient(90deg, #f5637b 0%, #b539a8 100%);
 $purpleGradient: linear-gradient(90deg, #e881d6 0%, #906be8 100%);
 $orangeGradient: linear-gradient(90deg, #ffac10 0%, #ff7d04 100%);
@@ -14,6 +15,7 @@ $greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
 //MIXINS
 //----------------------------------------------------
 @mixin bodyFont (){
+  display: block;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -28,21 +30,25 @@ $greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
   align-items: center;
 }
 
-@mixin flexColumn () {
+@mixin flexColumn (){
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+@mixin wrapper (){
+  width: 80%;
+}
+
 //GLOBAL STYLING
 //----------------------------------------------------
 body {
-  display: block;
-  background: $white;
   @include flexColumn();
+  background: $white;
   border-left: 40px solid $frame;
   border-right: 40px solid $frame;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -54,159 +60,40 @@ h1 {
 }
 
 h2 {
-  display: block;
-  font-family: 'Lato', sans-serif;
+  @extend h1;
   font-weight: 700;
   font-size: 2rem;
   color: $frame;
   position: relative;
+}
 
-  &:after {
-    content: "";
-    background-image: $primaryGradient;
-    padding: 1px;
-    width: 50px;
-    top: 20px;
-    left: 120px;
-    position:absolute;
-    z-index:-10;
-  }
+h3 {
+  @extend h1;
+  font-size: 2rem;
+  color: $secondaryColor;
 }
 
 h4 {
-  display: block;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
+  @extend h1;
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1.6rem;
   margin-bottom: 20px;
   background: $primaryGradient;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   -ms-text-fill-color: transparent;
   -o-text-fill-color: transparent;
 }
 
-p {
-  @include bodyFont()
-}
-
-img {
-  max-width: 80%;
-}
-
-//FRAME
-//----------------------------------------------------
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: $frame;
-  @include flexRow();
-  @include bodyFont();
-  height: 40px;
-  z-index: 10;
-
-  &__list {
-    @include flexRow();
-    justify-content: space-between;
-    width: 100%;
-    max-width: 400px;
-
-    &--item {
-      color: $frameColor;
-      text-transform: capitalize;
-      font-weight: 700;
-    }
-  }
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: $frame;
-  height: 40px;
-  @include flexRow();
-  
-  &__socialMedia {
-    @include flexRow();
-    justify-content: space-between;
-    width: 100%;
-    max-width: 300px;
-  }
-
-  a {
-    i {
-      font-size: 1.2rem;
-      color: $frameColor;
-    }
-  }
-}
-
-//HEADER
-//----------------------------------------------------
-
-header {
-  height: 100vh;
-  @include flexColumn();
-  text-align: center;
-}
-
-.header__button {
-  display: block;
-  width: 150px;
-  height: 40px;
-  padding: 9px 10px;
-  margin: auto;
-  margin-top: 20px;
-  border-radius: 5px;
+h5 {
   @include bodyFont();
   font-weight: 700;
-  position: relative;
-  background: $white;
-
-  &:before {
-    content: '';
-    background-image: $primaryGradient;
-    border-radius: 6px;
-    padding: 2px;
-    width: 100%;
-    height:100%;
-    top: -2px;
-    left: -2px;
-    position:absolute;
-    z-index:-10;
-  }
+  font-size: 1.2rem;
 }
 
-//BIO
-//----------------------------------------------------
-
-.bio {
-  @include flexRow();
-  height: calc(100vh - 80px);
-  width: 100%;
-
-  &--textLayout{
-    @include flexRow();
-    align-items: flex-start;
-    transform: translate(40px, 0px);
-  }
-
-  h2 {
-    min-width: 200px;
-  }
-
-  &__info{
-    max-width: 400px;
-  }
-
-  &__picture{
-    transform: translate(-40px, 0px);
-    z-index: -10;
-  }
+p {
+  @include bodyFont()
 }

@@ -1,0 +1,77 @@
+//FRAME
+//----------------------------------------------------
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $frame;
+  @include flexRow();
+  @include bodyFont();
+  line-height: 10px;
+  height: 40px;
+  z-index: 10;
+
+  &__list {
+    @include flexRow();
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+
+    &--item {
+      color: $frameColor;
+      text-transform: capitalize;
+      font-weight: 700;
+      position: relative;
+
+      &::after {
+        background: $primaryGradient;
+        content: "";
+        height: 2px;
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        top: 50%;
+        visibility: hidden;
+      }
+
+      &:hover::after {
+        visibility: visible;
+      }
+    }
+
+    &--itemActive {
+      &:after {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $frame;
+  height: 40px;
+  @include flexRow();
+
+  &__socialMedia {
+    @include flexRow();
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  a {
+    i {
+      font-size: 1.2rem;
+      color: $frameColor;
+      &:hover, &:focus {
+        color: $secondaryColor;
+      }
+    }
+  }
+}
