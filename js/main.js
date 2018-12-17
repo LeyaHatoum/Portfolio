@@ -68,6 +68,9 @@ const skills = [{
 }
 ]
 
+
+AOS.init();
+
 projects.map((project, index) => {
   const projectName = $("<h3>").text(project.name);
   const projectSkills = $("<h4>").text(project.skills);
@@ -75,14 +78,13 @@ projects.map((project, index) => {
   const projectInfo = $("<div class='projects__projectInfo'>").append(projectName, projectSkills, projectDesc);
   const projectSite = $("<a class='projects__projectButtons--link'>").text("site").attr({"href": project.siteURL, "target": "_blank"});
   const projectCode = $("<a class='projects__projectButtons--link'>").text("code").attr({"href": project.githubURL, "target": "_blank"});
-  const projectButtons = $("<div class='projects__projectButtons'>").append(projectSite, projectCode)
+  const projectButtons = $("<div class='projects__projectButtons visibilityHidden'>").append(projectSite, projectCode)
   const projectImage = $("<img class='projects__projectImage'>").attr("src", project.image);
   const projectLinks = $("<div class='projects__projectLinks'>").append(projectButtons, projectImage);
   console.log("index", index)
   const singleProject = $("<div class='projects__singleProject'>").append(projectInfo, projectLinks)
   index % 2 === 0 ? singleProject.addClass("projects__singleProject--flip") : null ;
   $(".projects").append(singleProject);
-  console.log("I'm running")
 });
 
 const skillList = $("<div class='skills__list'>");
@@ -90,7 +92,6 @@ skills.map(skill => {
   const skillName = $("<h5>").text(skill.name);
   const skillGroup = $("<div class='skills__skill'>").append(skill.icon, skillName);
   skillList.append(skillGroup);
-  console.log("skills is running too")
 });
 $(".skills").append(skillList);
 
@@ -99,7 +100,6 @@ $("section").waypoint(function (direction) {
   if (direction == "down"){
     $(".menu__list--item").removeClass("menu__list--itemActive");
     $(`#${this.element.id}Link`).addClass("menu__list--itemActive");
-    $(`#${this.element.id}`).addClass("sectionTransition--activate");
   }
 },{offset: "50%"});
 
@@ -112,4 +112,14 @@ $("section").waypoint(function (direction) {
 
 $("#home").waypoint(function () {
   $(".menu__list--item").removeClass("menu__list--itemActive");
+})
+
+$(".projects__projectLinks").on("mouseover", function () {
+  console.log("this is what you hovered on", this)
+  $(this).children(".projects__projectButtons").removeClass("visibilityHidden")
+})
+
+$(".projects__projectLinks").on("mouseout", function () {
+  console.log("this is what you hovered on", this)
+  $(this).children(".projects__projectButtons").addClass("visibilityHidden")
 })

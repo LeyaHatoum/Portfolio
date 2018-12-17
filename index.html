@@ -8,6 +8,7 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Leya Hatoum</title>
 </head>
@@ -26,7 +27,14 @@
         <a href="#contact"><li id="contactLink" class="menu__list--item">contact</li></a>
       </ul>
     </nav>
-    <div>
+    <div data-aos="fade-up"
+    data-aos-offset="400"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    >
       <p>Hello</p>
       <h1>I'm Leya Hatoum</h1>
       <h4>Web Developer and Designer</h4>
@@ -34,7 +42,8 @@
     </div>
   </header>
   <main id="main">
-    <section id="bio" class="bio sectionTransition">
+    <section id="bio" class="bio"
+    >
       <div class="bio--textLayout">
         <h2>My Bio</h2>
         <div class="bio__info">
@@ -47,11 +56,15 @@
       </div>
       <img class="bio__picture" src="./assets/leyaHatoum__front.png" alt="Picture of Leya Hatoum">
     </section>
-    <section id="projects" class="projects sectionTransition">
+    <section id="projects" class="projects" 
+    
+    >
       <h2>Projects</h2>
       <!-- this div is generated in JS -->
     </section>
-    <section id="skills" class="skills sectionTransition">
+    <section id="skills" class="skills" 
+ 
+    >
       <h2>My Skills</h2>
       <!-- this skills div is generated in JS -->
       </div>
@@ -92,6 +105,7 @@
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>
   <script src="js/jquery.waypoints.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 

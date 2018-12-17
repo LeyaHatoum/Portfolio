@@ -13,15 +13,14 @@
   }
 
   h2 {
-    min-width: 200px;
-
+    min-width: 240px;
     &:after {
       content: "";
       background-image: $primaryGradient;
       padding: 1px;
       width: 50px;
-      top: 20px;
-      left: 120px;
+      top: 25px;
+      left: 168px;
       position: absolute;
       z-index: -10;
     }

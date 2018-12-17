@@ -55,21 +55,23 @@ h1 {
   display: block;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 5rem;
   color: $primaryColor;
+  -webkit-filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
 }
 
 h2 {
   @extend h1;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
   color: $frame;
   position: relative;
 }
 
 h3 {
   @extend h1;
-  font-size: 2rem;
+  font-size: 3rem;
   color: $secondaryColor;
 }
 
