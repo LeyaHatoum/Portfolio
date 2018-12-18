@@ -54,11 +54,31 @@
 }
 
 @media all and (max-width: 750px){
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+  .el {
+    position: absolute;
+    opacity: 0.7;
+    width: 4px;
+    max-height: 80%;
+    height: 5vh;
+    top: 20%;
+    transform-origin: 50% 150%;
+    background: white;
+    z-index: -5;
+  }
+
   .bio {
-    @include flexColumn();
     width: 90%;
     margin: auto;
-    min-height: 100vh;
+    height: inherit;
+    flex-flow: wrap;
 
     &--textLayout {
       align-items: center;
@@ -156,6 +176,34 @@
 
     &__socialMedia{
       max-width: 250px;
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .projects {
+    &__projectInfo {
+      text-align: center;
+      max-width: 100%;
+      margin: 0 0 60px 0;
+    }
+
+    &__projectLinks {
+      transform: translate(0, -60px);
+    }
+
+    &__projectImage {
+      max-width: 100%;
+      min-width: 250px;
+      margin: 0;
     }
   }
 }

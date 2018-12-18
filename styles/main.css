@@ -395,6 +395,19 @@ header {
     background: linear-gradient(90deg, #f5637b 0%, #b539a8 100%);
     color: #efefef; }
 
+.el {
+  position: absolute;
+  opacity: 0.7;
+  width: 4px;
+  max-height: 80%;
+  height: 15vh;
+  top: 30%;
+  -webkit-transform-origin: 50% 150%;
+  -ms-transform-origin: 50% 150%;
+  transform-origin: 50% 150%;
+  background: white;
+  z-index: -5; }
+
 .bio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -791,23 +804,28 @@ header {
     margin: 0; } }
 
 @media all and (max-width: 750px) {
+  h1, h2, h3, h4 {
+    font-size: 3.5rem; }
+  h4 {
+    font-size: 1rem; }
+  .el {
+    position: absolute;
+    opacity: 0.7;
+    width: 4px;
+    max-height: 80%;
+    height: 5vh;
+    top: 20%;
+    -webkit-transform-origin: 50% 150%;
+    -ms-transform-origin: 50% 150%;
+    transform-origin: 50% 150%;
+    background: white;
+    z-index: -5; }
   .bio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     width: 90%;
     margin: auto;
-    min-height: 100vh; }
+    height: inherit;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap; }
     .bio--textLayout {
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -896,3 +914,21 @@ header {
     height: inherit; }
   .footer__socialMedia {
     max-width: 250px; } }
+
+@media all and (max-width: 450px) {
+  h1, h2, h3, h4 {
+    font-size: 3rem; }
+  h4 {
+    font-size: 1rem; }
+  .projects__projectInfo {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 60px 0; }
+  .projects__projectLinks {
+    -webkit-transform: translate(0, -60px);
+    -ms-transform: translate(0, -60px);
+    transform: translate(0, -60px); }
+  .projects__projectImage {
+    max-width: 100%;
+    min-width: 250px;
+    margin: 0; } }

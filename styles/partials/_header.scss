@@ -38,3 +38,15 @@ header {
     color: $white;
   }
 }
+
+.el {
+  position: absolute;
+  opacity: 0.7;
+  width: 4px;
+  max-height: 80%;
+  height: 15vh;
+  top: 30%;
+  transform-origin: 50% 150%;
+  background: white;
+  z-index: -5;
+}
