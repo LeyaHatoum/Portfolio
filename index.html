@@ -20,22 +20,20 @@
       <label class="menu__hamburger visibilityHidden" for="hamburger"><i class="fas fa-bars"></i></label>
       <input class="menu__hamburger--hideCheckbox visibilityHidden" type="checkbox" id="hamburger">
       <ul class="menu__list menu--show">
-        <!-- <a href="#home"><li id="homeLink" class="menu__list--item">home</li></a> -->
+        <a href="#home"><li id="homeLink" class="menu__list--item">home</li></a>
         <a href="#bio"><li id="bioLink" class="menu__list--item">bio</li></a>
         <a href="#projects"><li id="projectsLink" class="menu__list--item">projects</li></a>
         <a href="#skills"><li id="skillsLink" class="menu__list--item">skills</li></a>
         <a href="#contact"><li id="contactLink" class="menu__list--item">contact</li></a>
       </ul>
     </nav>
-    <div data-aos="fade-up"
+    <div 
+    data-aos="fade-up"
     data-aos-offset="400"
     data-aos-delay="50"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
     >
-      <p>Hello</p>
       <h1>I'm Leya Hatoum</h1>
       <h4>Web Developer and Designer</h4>
       <a class="header__button" href="#">Get CV</a>
@@ -44,7 +42,13 @@
   <main id="main wrapper">
     <section id="bio" class="bio"
     >
-      <div class="bio--textLayout">
+      <div 
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      class="bio--textLayout">
         <h2>My Bio</h2>
         <div class="bio__info">
           <h4>Hi there! <br>I'm Leya Hatoum, welcome to my site.</h4>
@@ -54,7 +58,13 @@
             communication background.</p>
         </div>
       </div>
-      <img class="bio__picture" src="./assets/leyaHatoum__front.png" alt="Picture of Leya Hatoum">
+      <img 
+      data-aos="fade-up"
+      data-aos-offset="200"
+      data-aos-delay="0"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      class="bio__picture" src="./assets/leyaHatoum__front.png" alt="Picture of Leya Hatoum">
     </section>
     <section id="projects" class="projects" 
     
@@ -93,15 +103,16 @@
   </main>
 
   <footer class="footer">
+    <p class="footer__siteCredit">Site created by me</p>
     <div class="footer__socialMedia">
       <a href="https://linkedin.com/in/leya-hatoum-404726122/"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://twitter.com/leyahatoum"><i class="fab fa-twitter"></i></a>
       <a href="https://medium.com/@leyahatoum10"><i class="fab fa-medium-m"></i></a>
       <a href="https://github.com/LeyaHatoum"><i class="fab fa-github"></i></a>
     </div>
+<p class="footer__photoCredit">Photo credit goes to <a class="footer__photoCredit--link" href="https://pamlau.com/" target="_blank">Pam Lau</a></p>
   </footer>
 
-  <!-- <script type="module" src="js/projects.js" ></script> -->
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>
   <script src="js/anime.min.js"></script>

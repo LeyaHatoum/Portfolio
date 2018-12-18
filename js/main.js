@@ -1,31 +1,32 @@
+//ARRAYS OF CONTENT
 const projects = [{
     name: "Harper",
-    skills: "HTML & CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi harum voluptatum nobis aut cupiditate eligendi est, illum, libero ratione fuga asperiores et? Laborum enim laboriosam quidem architecto fuga ducimus?",
+    skills: "HTML & CSS, Git, Sass, Responsive, Accessible",
+    description: "A fully responsive multi-page website",
     image: "./assets/projects/harper.png",
-    siteURL: "TBD",
+    siteURL: "#",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project2"
   },
   {
-    name: "Gordon Ramsay Insult",
-    skills: "Jquery, Javascript, HTML & CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi harum voluptatum nobis aut cupiditate eligendi est, illum, libero ratione fuga asperiores et? Laborum enim laboriosam quidem architecto fuga ducimus?",
+    name: "What Does Gordon Think?",
+    skills: "Jquery, Javascript, HTML & CSS, Sass, Git, Responsive, Accessible",
+    description: "Ever wanted to get personally insulted by Gordon Ramsay? This site allows the user to put in the name of a dish and generates a personalized Gordon Ramsay insult in a gif.",
     image: "./assets/projects/gordonRamsay.png",
     siteURL: "https://leyahatoum.github.io/leya_hatoum_project3/",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project3"
   },
   {
-    name: "Rick & Morty API",
-    skills: "React, Javascript, HTML & CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi harum voluptatum nobis aut cupiditate eligendi est, illum, libero ratione fuga asperiores et? Laborum enim laboriosam quidem architecto fuga ducimus?",
+    name: "The Multiverse",
+    skills: "Rick & Morty API, React, Javascript, HTML & CSS, Sass, Git, Responsive, Accessible",
+    description: "This site is based on the Rick & Morty cartoon series. The user can explore different dimensions, see the planets in each dimension, and check out all the residents of each planet. All the data displayed is retrieved from two different endpoints of the Rick & Morty API.",
     image: "./assets/projects/rickAndMorty.png",
     siteURL: "https://project-5-bed09.firebaseapp.com/",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project5"
   },
   {
-    name: "Meet Me Halfway",
-    skills: "Firebase, React, Javascript, HTML & CSS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, modi harum voluptatum nobis aut cupiditate eligendi est, illum, libero ratione fuga asperiores et? Laborum enim laboriosam quidem architecto fuga ducimus?",
+    name: "Middl",
+    skills: "Yelp! API, Google Geocode API, Google Maps API, Firebase, React, Javascript, HTML & CSS, Group Programming, Sass, Git, Responsive, Accessible",
+    description: "Middl is an app that helps you find a bar or a coffee shop halfway in between the user and their date, it also factors in both the user and their date's modes of transportation. The results are retrieved using several APIs. The app makes use of the Firebase database and User Authentication features so that users can save their default address and mode of transportation, and can even message each other.",
     image: "./assets/projects/middl.png",
     siteURL: "https://meet-halfway-905ad.firebaseapp.com/",
     githubURL: "https://github.com/LeyaHatoum/project6"
@@ -51,7 +52,7 @@ const skills = [{
   icon: "<img src='./assets/icons/skillsCSS3.svg'>",
   name: "CSS3"
 }, {
-  icon: "<img src='./assets/icons/skillsSass.svg'>",
+  icon: "<img src='./assets/icons/skillsSASS.svg'>",
   name: "Sass"
 }, {
   icon: "<img src='./assets/icons/skillsGit.svg'>",
@@ -60,7 +61,7 @@ const skills = [{
   icon: "<img src='./assets/icons/skillsVSCode.svg'>",
   name: "VSCode"
 }, {
-  icon: "<img src='./assets/icons/skillsSketch.svg'>",
+  icon: "<img src='./assets/icons/skillsSKETCH.svg'>",
   name: "Sketch"
 }, {
   icon: "<img src='./assets/icons/skillsPSD.svg'>",
@@ -77,21 +78,28 @@ const skills = [{
 }
 ]
 
-
+//INITIALIZE LIBRARIES
 AOS.init();
 
+// MAP THROUGH PROJECTS & SKILLS
 projects.map((project, index) => {
   const projectName = $("<h3>").text(project.name);
   const projectSkills = $("<h4>").text(project.skills);
   const projectDesc = $("<p>").text(project.description);
-  const projectInfo = $("<div class='projects__projectInfo'>").append(projectName, projectSkills, projectDesc);
   const projectSite = $("<a class='projects__projectButtons--link'>").text("site").attr({"href": project.siteURL, "target": "_blank"});
   const projectCode = $("<a class='projects__projectButtons--link'>").text("code").attr({"href": project.githubURL, "target": "_blank"});
-  const projectButtons = $("<div class='projects__projectButtons visibilityHidden'>").append(projectSite, projectCode)
+  const projectButtons = $("<div class='projects__projectButtons'>").append(projectSite, projectCode)
+  const projectInfo = $("<div class='projects__projectInfo'>").append(projectName, projectSkills, projectDesc, projectButtons);
   const projectImage = $("<img class='projects__projectImage'>").attr("src", project.image);
-  const projectLinks = $("<div class='projects__projectLinks'>").append(projectButtons, projectImage);
+  const projectLinks = $("<div class='projects__projectLinks'>").append(projectImage);
   console.log("index", index)
-  const singleProject = $("<div class='projects__singleProject wrapper'>").append(projectInfo, projectLinks)
+  const singleProject = $(`<div class='projects__singleProject wrapper'
+  data-aos='fade-up'
+  data-aos-offset='400'
+  data-aos-delay='50'
+  data-aos-duration='1000'
+  data-aos-easing='ease-in-out'
+  >`).append(projectInfo, projectLinks)
   index % 2 === 0 ? singleProject.addClass("projects__singleProject--flip") : null ;
   $(".projects").append(singleProject);
 });
@@ -99,12 +107,20 @@ projects.map((project, index) => {
 const skillList = $("<div class='skills__list wrapper'>");
 skills.map(skill => {
   const skillName = $("<h5>").text(skill.name);
-  const skillGroup = $("<div class='skills__skill'>").append(skill.icon, skillName);
+  const skillGroup = $(`<div class='skills__skill'
+  data-aos='fade-up'
+  data-aos-offset='400'
+  data-aos-delay='100'
+  data-aos-duration='500'
+  data-aos-easing='ease-in-out'
+  >`).append(skill.icon, skillName);
   skillList.append(skillGroup);
 });
 $(".skills").append(skillList);
 
 
+
+// STRIKE THROUGH NAV ON SCROLL
 $("section").waypoint(function (direction) {
   if (direction == "down"){
     $(".menu__list--item").removeClass("menu__list--itemActive");
@@ -123,20 +139,14 @@ $("#home").waypoint(function () {
   $(".menu__list--item").removeClass("menu__list--itemActive");
 })
 
-$(".projects__projectLinks").on("mouseover", function () {
-  $(this).children(".projects__projectButtons").removeClass("visibilityHidden")
-})
-
-$(".projects__projectLinks").on("mouseout", function () {
-  $(this).children(".projects__projectButtons").addClass("visibilityHidden")
-})
-
+//MOBILE HAMBURGER FUNCTIONALITY -- CHANGES ICON AND TOGGLES NAV
 $(".menu__hamburger").on("click", function (){
   $(".menu__list").toggleClass("menu--show")
   $(".menu__hamburger").children(".fas").toggleClass("fa-bars").toggleClass("fa-times")
 })
 
 
+//ANIME.JS MOVING CIRCLE
 //----------------------------------------------------------------------
 const wrapperEl = document.getElementById('home');
 console.log("wrapper", document.getElementById('home'))

@@ -57,6 +57,7 @@
   background: $frame;
   height: 40px;
   @include flexRow();
+  justify-content: space-between;
 
   &__socialMedia {
     @include flexRow();
@@ -72,6 +73,19 @@
       &:hover, &:focus {
         color: $secondaryColor;
       }
+    }
+  }
+
+  &__siteCredit, &__photoCredit {
+    color: $secondaryColor;
+    font-weight: 700;
+    margin: 0 60px;
+  }
+
+  &__photoCredit {
+    &--link {
+      text-decoration: none;
+      color: $frameColor;
     }
   }
 }

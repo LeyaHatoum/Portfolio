@@ -39,13 +39,20 @@ $greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
 
 //GLOBAL STYLING
 //----------------------------------------------------
+* {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
+  -ms-scroll-behavior: smooth;
+  -o-scroll-behavior: smooth;
+}
+
 body {
   @include flexColumn();
   width: 100%;
   background: $white;
   border-left: 40px solid $frame;
   border-right: 40px solid $frame;
-  scroll-behavior: smooth;
 }
 
 h1 {
