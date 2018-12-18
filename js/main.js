@@ -33,38 +33,47 @@ const projects = [{
 ]
 
 const skills = [{
-  icon: "<i class='fab fa-js-square'></i>",
+  icon: "<img src='./assets/icons/skillsJS.svg'>",
   name: "Javacsript"
 }, {
-  icon: "<img src='./assets/icons/jQuery.png'>",
+  icon: "<img src='./assets/icons/skillsJQUERY.svg'>",
   name: "jQuery"
 }, {
-  icon: "<i class='fab fa-react'></i>",
+  icon: "<img src='./assets/icons/skillsReact.svg'>",
   name: "React"
 }, {
-  icon: "<img src='./assets/icons/firebase.png'>",
+  icon: "<img src='./assets/icons/skillsFirebase.svg'>",
   name: "Firebase"
 }, {
-  icon: "<i class='fab fa-html5'></i>",
+  icon: "<img src='./assets/icons/skillsHTML5.svg'>",
   name: "HTML5"
 }, {
-  icon: "<i class='fab fa-css3-alt'></i>",
+  icon: "<img src='./assets/icons/skillsCSS3.svg'>",
   name: "CSS3"
 }, {
-  icon: "<i class='fab fa-sass'></i>",
+  icon: "<img src='./assets/icons/skillsSass.svg'>",
   name: "Sass"
 }, {
-  icon: "<i class='fab fa-git-square'></i>",
+  icon: "<img src='./assets/icons/skillsGit.svg'>",
   name: "Git"
 }, {
-  icon: "<img src='./assets/icons/vsCode.png'>",
+  icon: "<img src='./assets/icons/skillsVSCode.svg'>",
   name: "VSCode"
 }, {
-  icon: "<i class='fab fa-sketch'></i>",
+  icon: "<img src='./assets/icons/skillsSketch.svg'>",
   name: "Sketch"
 }, {
-  icon: "<i class='fab fa-adobe'></i>",
-  name: "Adobe Suite"
+  icon: "<img src='./assets/icons/skillsPSD.svg'>",
+  name: "Photoshop"
+}, {
+  icon: "<img src='./assets/icons/skillsAI.svg'>",
+  name: "Illustrator"
+}, {
+  icon: "<img src='./assets/icons/skillsID.svg'>",
+  name: "InDesign"
+}, {
+  icon: "<img src='./assets/icons/skillsAE.svg'>",
+  name: "After Effects"
 }
 ]
 
