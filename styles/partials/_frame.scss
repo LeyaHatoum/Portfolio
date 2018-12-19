@@ -20,9 +20,8 @@
     margin: auto;
 
     &--item {
-      color: $frameColor;
+      color: $white;
       text-transform: capitalize;
-      font-weight: 700;
       position: relative;
 
       &::after {
@@ -64,12 +63,13 @@
     justify-content: space-between;
     width: 100%;
     max-width: 300px;
+    margin-left: 4%;
   }
 
   a {
     i {
       font-size: 1.2rem;
-      color: $frameColor;
+      color: $white;
       &:hover, &:focus {
         color: $secondaryColor;
       }
@@ -77,15 +77,14 @@
   }
 
   &__siteCredit, &__photoCredit {
-    color: $secondaryColor;
-    font-weight: 700;
+    color: $white;
     margin: 0 60px;
   }
 
   &__photoCredit {
     &--link {
       text-decoration: none;
-      color: $frameColor;
+      color: $white;
     }
   }
 }

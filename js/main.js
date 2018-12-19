@@ -119,25 +119,29 @@ skills.map(skill => {
 $(".skills").append(skillList);
 
 
-
 // STRIKE THROUGH NAV ON SCROLL
-$("section").waypoint(function (direction) {
-  if (direction == "down"){
+// ONLY APPEARS ON OVER 550PX -- RESIZE NOT FUNCTIONAL
+if ($(window).width() > 550) {
+  console.log("heyyyyyy")
+  $("section").waypoint(function (direction) {
+    if (direction == "down"){
+      $(".menu__list--item").removeClass("menu__list--itemActive");
+      $(`#${this.element.id}Link`).addClass("menu__list--itemActive");
+    }
+  },{offset: "50%"});
+  
+  $("section").waypoint(function (direction) {
+    if (direction == "up"){
+      $(".menu__list--item").removeClass("menu__list--itemActive");
+      $(`#${this.element.id}Link`).addClass("menu__list--itemActive");
+    }
+  },{offset: "-50%"});
+  
+  $("#home").waypoint(function () {
     $(".menu__list--item").removeClass("menu__list--itemActive");
-    $(`#${this.element.id}Link`).addClass("menu__list--itemActive");
-  }
-},{offset: "50%"});
+  })
+}
 
-$("section").waypoint(function (direction) {
-  if (direction == "up"){
-    $(".menu__list--item").removeClass("menu__list--itemActive");
-    $(`#${this.element.id}Link`).addClass("menu__list--itemActive");
-  }
-},{offset: "-50%"});
-
-$("#home").waypoint(function () {
-  $(".menu__list--item").removeClass("menu__list--itemActive");
-})
 
 //MOBILE HAMBURGER FUNCTIONALITY -- CHANGES ICON AND TOGGLES NAV
 $(".menu__hamburger").on("click", function (){

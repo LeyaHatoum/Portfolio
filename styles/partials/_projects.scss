@@ -14,14 +14,14 @@
   }
 
   &__projectImage {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 20px;
-    -webkit-filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.05));
-    filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.05));
+    -webkit-filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.3));
   }
 
   &__projectInfo {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 20px;
   }
 
@@ -35,6 +35,7 @@
     @include flexRow();
     justify-content: space-between;
     z-index: 1;
+    text-transform: capitalize;
 
     &--link {
       position: relative;

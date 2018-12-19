@@ -31,18 +31,19 @@
   }
 
   input[type=submit] {
-    background: $primaryGradient;
+    background: $secondaryColor;
     border: none;
     @include bodyFont();
     font-weight: 700;
     color: $white;
     padding: 0;
-    transition: background 1s linear;
+    transition: background 0.3s linear;
 
     &:hover,
     &:focus {
-      background: $blueGradient;
-      transition: background 1s linear;
+      background: $frameColor;
+      color: $frame;
+      transition: background 0.3s linear;
     }
   }
 

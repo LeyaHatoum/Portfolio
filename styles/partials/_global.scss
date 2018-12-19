@@ -5,7 +5,7 @@ $frameColor: #a2a9da;
 $bodyColor: #4d516e;
 $white: #efefef;
 $primaryColor: #3b4888;
-$secondaryColor: #a43c71;
+$secondaryColor: #b42c72;
 $primaryGradient: linear-gradient(90deg, #f5637b 0%, #b539a8 100%);
 $purpleGradient: linear-gradient(90deg, #e881d6 0%, #906be8 100%);
 $orangeGradient: linear-gradient(90deg, #ffac10 0%, #ff7d04 100%);
@@ -60,7 +60,7 @@ h1 {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 5rem;
-  color: $primaryColor;
+  color: $frame;
   -webkit-filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
 }
