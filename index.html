@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="shortcut icon" type="image/png" href="assets/favicon-01.png" />
+  <link rel="icon" type="image/png" href="assets/favicon-01.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Leya Hatoum</title>
 </head>
@@ -18,8 +18,15 @@
   <a href="#main">Skip to the main content</a>
   <header id="home">
     <nav class="menu">
-      <label class="menu__hamburger visibilityHidden" for="hamburger"><i class="fas fa-bars"></i></label>
-      <input class="menu__hamburger--hideCheckbox visibilityHidden" type="checkbox" id="hamburger">
+      <label 
+        class="menu__hamburger visibilityHidden" 
+        for="hamburger"
+      ><i class="fas fa-bars"></i></label>
+      <input 
+        class="menu__hamburger--hideCheckbox visibilityHidden" 
+        type="checkbox" 
+        id="hamburger"
+      >
       <ul class="menu__list menu--show">
         <a href="#home"><li id="homeLink" class="menu__list--item">home</li></a>
         <a href="#bio"><li id="bioLink" class="menu__list--item">bio</li></a>
@@ -29,27 +36,32 @@
       </ul>
     </nav>
     <div 
-    data-aos="fade-up"
-    data-aos-offset="400"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
+      data-aos="fade-up"
+      data-aos-offset="50"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      class="header__content"
     >
       <h1>I'm Leya Hatoum</h1>
       <h4>Web Developer and Designer</h4>
       <i class="fas fa-arrow-down header__arrow"></i>
+      <div id="myAnime" class="myAnime"></div>
     </div>
   </header>
   <main id="main wrapper">
-    <section id="bio" class="bio wrapper"
+    <section 
+      id="bio" 
+      class="bio wrapper"
     >
       <div 
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-delay="0"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      class="bio--textLayout">
+        data-aos="fade-up"
+        data-aos-offset="50"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        class="bio--textLayout"
+      >
         <h2>My Bio</h2>
         <div class="bio__info">
           <h4>Hi there! <br>I'm Leya Hatoum, welcome to my site.</h4>
@@ -57,31 +69,42 @@
             work, and then make them better. My top priorities are accessibility and responsiveness, and that is reflected
             in all projects I take on. I also have a keen interest in user experience that is supported by my design and
             communication background.</p>
-            <a class="bio__button" href="#">Get CV</a>
+            <a 
+              class="bio__button" 
+              href= "http://leya.space/resume-leya-hatoum.pdf" 
+              target="_blank"
+            >Get CV</a>
         </div>
       </div>
       <img 
-      data-aos="fade-up"
-      data-aos-offset="200"
-      data-aos-delay="0"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      class="bio__picture" src="./assets/leyaHatoum__front.png" alt="Picture of Leya Hatoum">
+        data-aos="fade-up"
+        data-aos-offset="50"
+        data-aos-delay="0"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        class="bio__picture" 
+        src="./assets/leyaHatoum__front.png" 
+        alt="Picture of Leya Hatoum"
+      >
     </section>
-    <section id="projects" class="projects" 
-    
+    <section 
+      id="projects" 
+      class="projects" 
     >
       <h2>Projects</h2>
       <!-- this div is generated in JS -->
     </section>
-    <section id="skills" class="skills" 
- 
+    <section 
+      id="skills" 
+      class="skills" 
     >
       <h2>My Skills</h2>
       <!-- this skills div is generated in JS -->
-      </div>
     </section>
-    <section id="contact" class="contact">
+    <section 
+      id="contact" 
+      class="contact"
+    >
       <h2>Contact Me</h2>
       <form class="form wrapper">
         <div class="form--leftItems">
@@ -115,8 +138,10 @@
 <p class="footer__photoCredit">Photo credit goes to <a class="footer__photoCredit--link" href="https://pamlau.com/" target="_blank">Pam Lau</a></p>
   </footer>
 
-  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-    crossorigin='anonymous'></script>
+  <script 
+    src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'
+  ></script>
   <script src="js/anime.min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -57,12 +57,16 @@
   height: 40px;
   @include flexRow();
   justify-content: space-between;
+  z-index: 10;
+
+  -webkit-filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.3));
 
   &__socialMedia {
     @include flexRow();
     justify-content: space-between;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     margin-left: 4%;
   }
 

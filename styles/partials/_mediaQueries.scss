@@ -10,10 +10,13 @@
     }
 
     h2 {
-      margin-bottom: 20px;
       &::after {
         display: none;
       }
+    }
+
+    h4 {
+      margin-top: 20px;
     }
 
     &__picture {
@@ -60,16 +63,9 @@
 
 @media all and (max-width: 900px) {
   .footer {
-    @include flexColumn();
-    // justify-content: space-around;
-    height: 120px;
-
     &__siteCredit, &__photoCredit {
-      order: 1;
-    }
-
-    &__socialMedia {
-      margin: 20px 0;
+      font-size: 0.8rem;
+      margin: 0 40px;
     }
   }
 }
@@ -100,6 +96,13 @@
 }
 
 @media all and (max-width: 750px){
+  body {
+    border: none;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
 
   h1 {
     font-size: 3.5rem;
@@ -108,20 +111,8 @@
   h4 {
     font-size: 1rem;
   }
-  .el {
-    position: absolute;
-    opacity: 0.7;
-    width: 4px;
-    max-height: 80%;
-    height: 5vh;
-    top: 20%;
-    transform-origin: 50% 150%;
-    background: white;
-    z-index: -5;
-  }
 
   .bio {
-    width: 90%;
     margin: auto;
     height: inherit;
     flex-flow: wrap;
@@ -139,6 +130,9 @@
       transform: translate(0, 0);
       margin-top: 20px;
     }
+    &__button {
+      margin: 25px auto 0 auto;
+    }
   }
   .contact{
     padding-bottom: 50px;
@@ -151,18 +145,28 @@
       }
     }
   }
+
+  .footer {
+    position: relative;
+    width: 100%;
+    @include flexColumn();
+    height: 120px;
+
+    &__siteCredit,
+    &__photoCredit {
+      margin: 0;
+      order: 1;
+      font-size: 1rem;
+    }
+
+    &__socialMedia {
+      margin: 20px 0;
+    }
+  }
 }
 
 
 @media all and (max-width: 550px){
-
-  body {
-    border: none;
-  }
-
-  .wrapper {
-    width: 90%;
-  }
 
   .menu{
     height: 60px;
@@ -210,13 +214,6 @@
       height: inherit;
     }
   }
-  
-  .footer{
-
-    &__socialMedia{
-      max-width: 250px;
-    }
-  }
 }
 
 @media all and (max-width: 450px) {
@@ -234,10 +231,10 @@
 
   .projects {
     &__projectButtons {
-      @include flexColumn();
+      margin-bottom: 10px;
+      width: 260px;
       a {
-        margin-bottom: 20px;
-        width: 100%;
+        width: 120px;
       }
     }
   }

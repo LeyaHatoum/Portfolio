@@ -8,9 +8,6 @@ $primaryColor: #3b4888;
 $secondaryColor: #b42c72;
 $primaryGradient: linear-gradient(90deg, #f5637b 0%, #b539a8 100%);
 $purpleGradient: linear-gradient(90deg, #e881d6 0%, #906be8 100%);
-$orangeGradient: linear-gradient(90deg, #ffac10 0%, #ff7d04 100%);
-$blueGradient: linear-gradient(90deg, #42abfa 0%, #7a8dfe 100%);
-$greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
 
 //MIXINS
 //----------------------------------------------------
@@ -39,13 +36,6 @@ $greenGradient: linear-gradient(90deg, #0cf571 0%, #45fbdd 100%);
 
 //GLOBAL STYLING
 //----------------------------------------------------
-* {
-  scroll-behavior: smooth;
-  -webkit-scroll-behavior: smooth;
-  -moz-scroll-behavior: smooth;
-  -ms-scroll-behavior: smooth;
-  -o-scroll-behavior: smooth;
-}
 
 body {
   @include flexColumn();
@@ -58,33 +48,34 @@ body {
 h1 {
   display: block;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 5rem;
-  color: $frame;
+  color: $frameColor;
   -webkit-filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
   filter: drop-shadow(1px 1px 10px rgba(0, 0, 0, 0.1));
+  z-index: 10;
+}
+
+h2, h3, h4 {
+  @extend h1;
 }
 
 h2 {
-  @extend h1;
-  font-weight: 700;
   font-size: 3rem;
   color: $frame;
   position: relative;
 }
 
 h3 {
-  @extend h1;
+  font-weight: 400;
   font-size: 3rem;
   color: $secondaryColor;
 }
 
 h4 {
-  @extend h1;
   font-size: 1rem;
-  font-weight: 700;
   line-height: 1.6rem;
-  margin-bottom: 20px;
+  margin: 20px 0;
   background: $primaryGradient;
   background-clip: text;
   -webkit-background-clip: text;
@@ -94,14 +85,12 @@ h4 {
   -o-text-fill-color: transparent;
 }
 
-h5 {
+h5, p {
   @include bodyFont();
-  font-weight: 700;
-  font-size: 1.2rem;
 }
 
-p {
-  @include bodyFont()
+h5 {
+  font-size: 1.2rem;
 }
 
 .wrapper {

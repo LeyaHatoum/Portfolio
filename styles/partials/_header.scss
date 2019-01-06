@@ -5,23 +5,38 @@ header {
   height: 100vh;
   @include flexColumn();
   text-align: center;
-
+  width: 100%;
+  background: $frame;
 }
 
 .header{
   &__arrow {
     font-size: 1.2rem;
+    color: $frameColor;
   }
+  &__content{
+    position: relative;
+    width: 800px;
+    max-width: 90%;
+    height: 50%;
+    max-height: 60vw;
+    @include flexColumn();
+    text-align: center;
+  }
+}
+
+.myAnime {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .el {
   position: absolute;
-  opacity: 0.7;
-  width: 4px;
-  max-height: 80%;
-  height: 15vh;
-  top: 28%;
-  transform-origin: 50% 150%;
-  background: white;
-  z-index: -5;
+  opacity: 0.2;
+  width: 6px;
+  height: 30%;
+  top: 0;
+  left: 50%;
+  transform-origin: 0% 170%;
 }
