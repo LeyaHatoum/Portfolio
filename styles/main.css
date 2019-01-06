@@ -444,10 +444,10 @@ header {
     align-items: flex-start;
     -webkit-transform: translate(40px, 0px);
     -ms-transform: translate(40px, 0px);
-    transform: translate(40px, 0px);
-    z-index: -10; }
+    transform: translate(40px, 0px); }
   .bio h2 {
-    min-width: 240px; }
+    min-width: 240px;
+    z-index: -10; }
     .bio h2:after {
       content: "";
       background-image: -webkit-gradient(linear, left top, right top, from(#f5637b), to(#b539a8));
@@ -500,7 +500,7 @@ header {
       top: -2px;
       left: -2px;
       position: absolute;
-      z-index: -10; }
+      z-index: -20; }
     .bio__button:hover {
       background: -webkit-gradient(linear, left top, right top, from(#f5637b), to(#b539a8));
       background: -webkit-linear-gradient(left, #f5637b 0%, #b539a8 100%);
@@ -523,6 +523,8 @@ header {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 130px; }
+  .projects h2 {
+    z-index: -10; }
   .projects__singleProject {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -549,8 +551,9 @@ header {
     filter: drop-shadow(1px 1px 30px rgba(0, 0, 0, 0.3)); }
   .projects__projectInfo {
     max-width: 500px;
-    margin: 0 20px;
-    z-index: -10; }
+    margin: 0 20px; }
+    .projects__projectInfo h4 {
+      z-index: -10; }
   .projects__projectLinks {
     position: relative; }
   .projects__projectButtons {
@@ -627,7 +630,8 @@ header {
   min-height: 100vh;
   margin-bottom: 40px; }
   .skills h2 {
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    z-index: -10; }
   .skills__list {
     display: -webkit-box;
     display: -ms-flexbox;
