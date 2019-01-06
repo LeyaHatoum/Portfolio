@@ -197,6 +197,11 @@
       &--item {
         height: 60px;
       }
+      &--itemActive {
+        &:after {
+          visibility: hidden;
+        }
+      }
     }
 
     &--show {

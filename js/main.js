@@ -5,7 +5,7 @@ const projects = [
     name: "What Does Gordon Think?",
     skills: "Jquery, Javascript, HTML & CSS, Sass, Git, Responsive, Accessible",
     description: "Ever wanted to get personally insulted by Gordon Ramsay? This site allows the user to put in the name of a dish and generates a personalized Gordon Ramsay insult in a gif.",
-    image: "./assets/projects/gordonRamsay.png",
+    image: "./assets/projects/gordonRamsay-min.png",
     siteURL: "https://leyahatoum.github.io/leya_hatoum_project3/",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project3"
   },
@@ -13,7 +13,7 @@ const projects = [
     name: "Harper",
     skills: "HTML & CSS, Git, Sass, Responsive, Accessible",
     description: "A fully responsive multi-page website",
-    image: "./assets/projects/harper.png",
+    image: "./assets/projects/harper-min.png",
     siteURL: "http://leya.space/Harper/",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project2"
   },
@@ -21,7 +21,7 @@ const projects = [
     name: "The Multiverse",
     skills: "Rick & Morty API, React, Javascript, HTML & CSS, Sass, Git, Responsive, Accessible",
     description: "This site is based on the Rick & Morty cartoon series. The user can explore different dimensions, see the planets in each dimension, and check out all the residents of each planet. All the data displayed is retrieved from two different endpoints of the Rick & Morty API.",
-    image: "./assets/projects/rickAndMorty.png",
+    image: "./assets/projects/rickAndMorty-min.png",
     siteURL: "https://project-5-bed09.firebaseapp.com/",
     githubURL: "https://github.com/LeyaHatoum/leya_hatoum_project5"
   },
@@ -29,7 +29,7 @@ const projects = [
     name: "Middl",
     skills: "Yelp! API, Google Geocode API, Google Maps API, Firebase, React, Javascript, HTML & CSS, Group Programming, Sass, Git, Responsive, Accessible",
     description: "Middl is an app that helps you find a bar or a coffee shop halfway in between the user and their date, it also factors in both the user and their date's modes of transportation. The results are retrieved using several APIs. The app makes use of the Firebase database and User Authentication features so that users can save their default address and mode of transportation, and can even message each other.",
-    image: "./assets/projects/middl.png",
+    image: "./assets/projects/middl-min.png",
     siteURL: "https://meet-halfway-905ad.firebaseapp.com/",
     githubURL: "https://github.com/LeyaHatoum/project6"
   }
@@ -126,10 +126,9 @@ $(".skills").append(skillList);
 
 
 // STRIKE THROUGH NAV ON SCROLL
-// ONLY APPEARS ON OVER 550PX -- RESIZE NOT FUNCTIONAL
+// ONLY APPEARS ON OVER 550PX
 //----------------------------------------------------------------------
 if ($(window).width() > 550) {
-  // AOS.init();
   $("section").waypoint(function (direction) {
     if (direction == "down"){
       $(".menu__list--item").removeClass("menu__list--itemActive");
@@ -205,6 +204,11 @@ $(".menu__hamburger").on("click", function (){
   $(".menu__hamburger").children(".fas").toggleClass("fa-bars").toggleClass("fa-times")
 })
 
+$(".menu__list--item").on("click", function () {
+  $(".menu__list").addClass("menu--show")
+  $(".menu__hamburger").children(".fas").addClass("fa-bars").removeClass("fa-times")
+})
+
 
 //ANIME.JS MOVING CIRCLE
 //----------------------------------------------------------------------
@@ -248,7 +252,4 @@ function createEl(i) {
 
 for (let i = 0; i < numberOfEls; i++) createEl(i);
 
-//Trying to make it interactive on mouseover/hover -- check anime library for that though
-// $(".el").on("mouseover", function () {
-//   $(this)
-// }
+//That is all, thank you.

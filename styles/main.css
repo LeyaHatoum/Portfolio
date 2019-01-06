@@ -1022,6 +1022,8 @@ header {
       background: #0f0c1f; }
       .menu__list--item {
         height: 60px; }
+      .menu__list--itemActive:after {
+        visibility: hidden; }
     .menu--show {
       visibility: hidden; }
   .skills img {
