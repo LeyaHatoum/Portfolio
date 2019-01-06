@@ -209,8 +209,8 @@ $(".menu__hamburger").on("click", function (){
 //ANIME.JS MOVING CIRCLE
 //----------------------------------------------------------------------
 const myAnime = document.getElementById('myAnime');
-const numberOfEls = 40;
-const duration = 5000;
+const numberOfEls = 50;
+const duration = 5500;
 const delay = duration / numberOfEls;
 
 let tl = anime.timeline({
@@ -247,3 +247,8 @@ function createEl(i) {
 };
 
 for (let i = 0; i < numberOfEls; i++) createEl(i);
+
+//Trying to make it interactive on mouseover/hover -- check anime library for that though
+// $(".el").on("mouseover", function () {
+//   $(this)
+// }

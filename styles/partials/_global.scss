@@ -93,6 +93,38 @@ h5 {
   font-size: 1.2rem;
 }
 
+//WRAPPAAA
+//----------------------------------------------------
 .wrapper {
   width: 80%;
+}
+
+//SKIP TO MAIN
+//----------------------------------------------------
+.skipToMain {
+  position: absolute;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: $purpleGradient;
+  @include bodyFont();
+  text-align: center;
+  color: $frame;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 20px;
+
+  transform: translateY(-60px);
+
+  &:focus,
+  &:active {
+    transform: translateY(0px);
+  }
+
+  &:hover {
+    background: $primaryGradient;
+  }
 }

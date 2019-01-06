@@ -10,7 +10,7 @@
   @include bodyFont();
   line-height: 10px;
   height: 40px;
-  z-index: 10;
+  z-index: 20;
 
   &__list {
     @include flexRow();
