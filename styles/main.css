@@ -402,7 +402,20 @@ header {
   align-items: center;
   text-align: center;
   width: 100%;
-  background: #0f0c1f; }
+  background: #0f0c1f;
+  position: relative; }
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-radial-gradient(center, ellipse, black 0%, rgba(125, 185, 232, 0) 90%);
+    background: -o-radial-gradient(center, ellipse, black 0%, rgba(125, 185, 232, 0) 90%);
+    background: radial-gradient(ellipse at center, black 0%, rgba(125, 185, 232, 0) 90%);
+    background: -moz-radial-gradient(center, ellipse cover, black 0%, rgba(125, 185, 232, 0) 90%);
+    background: -webkit-radial-gradient(center, ellipse cover, black 0%, rgba(125, 185, 232, 0) 90%); }
 
 .header__arrow {
   font-size: 1.2rem;
@@ -437,13 +450,13 @@ header {
 .el {
   position: absolute;
   opacity: 0.2;
-  width: 6px;
+  width: 2px;
   height: 30%;
-  top: 0;
+  top: -2.5%;
   left: 50%;
-  -webkit-transform-origin: 0% 170%;
-  -ms-transform-origin: 0% 170%;
-  transform-origin: 0% 170%; }
+  -webkit-transform-origin: 100% 170%;
+  -ms-transform-origin: 100% 170%;
+  transform-origin: 100% 170%; }
 
 .bio {
   display: -webkit-box;
@@ -922,7 +935,8 @@ header {
     margin: auto;
     height: inherit;
     -ms-flex-flow: wrap;
-    flex-flow: wrap; }
+    flex-flow: wrap;
+    padding-top: 50px; }
     .bio--textLayout {
       -webkit-box-align: center;
       -ms-flex-align: center;

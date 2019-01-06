@@ -7,6 +7,19 @@ header {
   text-align: center;
   width: 100%;
   background: $frame;
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 90%);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 90%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 90%);
+  }
 }
 
 .header{
@@ -34,9 +47,9 @@ header {
 .el {
   position: absolute;
   opacity: 0.2;
-  width: 6px;
+  width: 2px;
   height: 30%;
-  top: 0;
+  top: -2.5%;
   left: 50%;
-  transform-origin: 0% 170%;
+  transform-origin: 100% 170%;
 }

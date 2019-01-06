@@ -213,8 +213,8 @@ $(".menu__list--item").on("click", function () {
 //ANIME.JS MOVING CIRCLE
 //----------------------------------------------------------------------
 const myAnime = document.getElementById('myAnime');
-const numberOfEls = 50;
-const duration = 5500;
+const numberOfEls = 150;
+const duration = 8000;
 const delay = duration / numberOfEls;
 
 let tl = anime.timeline({
