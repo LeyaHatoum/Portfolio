@@ -214,7 +214,7 @@ $(".menu__list--item").on("click", function () {
 //----------------------------------------------------------------------
 const myAnime = document.getElementById('myAnime');
 const numberOfEls = 150;
-const duration = 8000;
+const duration = 6000;
 const delay = duration / numberOfEls;
 
 let tl = anime.timeline({
@@ -231,15 +231,15 @@ function createEl(i) {
   const hue = Math.round(360 / numberOfEls * i);
   el.classList.add('el');
   el.style.backgroundColor = 'hsl(' + hue + ', 40%, 60%)';
-  el.style.transform = 'rotate(' + rotate + 'deg) translateY(' + translateY + '%)';
+  el.style.transform = 'translateY(' + translateY + '%)';
   tl.add({
     begin: function () {
       anime({
         targets: el,
         backgroundColor: ['hsl(' + hue + ', 40%, 60%)', 'hsl(' + hue + ', 60%, 80%)'],
         rotate: [rotate + 'deg', rotate + 10 + 'deg'],
-        translateY: [translateY + '%', translateY + 10 + '%'],
-        scale: [1, 1.25],
+        translateY: [translateY + '%', translateY + 50 + '%'],
+        scale: [1, 1],
         opacity: [1],
         easing: 'easeInOutSine',
         direction: 'alternate',
