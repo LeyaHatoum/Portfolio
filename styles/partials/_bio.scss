@@ -37,9 +37,13 @@
   }
 
   &__picture {
-    transform: translate(-40px, 0px);
+    transform: translate(-80px, 0px);
     z-index: -10;
     max-width: 500px;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__button {

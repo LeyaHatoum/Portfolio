@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Hello! I see you're interested in how I made this website. Welcome!
+A little background on this site: -->
+<!-- The site was built purely with HTML & CSS and JS. -->
+<!-- The animation you're seeing in the header is done using anime.js-->
+<!-- Navigation was made possible by using Waypoints -->
+<!-- Scrolling animations/transitions were done by using AOS -->
+<!-- If you'd like to connect, you can reach me on this e-mail: leyahatoum10@gmail.com -->
+<!-- Happy surfing! -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +18,11 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" type="image/png" href="assets/favicon-01.png" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Web Developer & Designer" />
+  <meta property="og:title" content="Leya Hatoum" />
+  <meta property="og:description" content="Web Developer & Designer" />
+  <meta property="og:url" content="http://leya.space" />
+  <meta property="og:image" content="http://leya.space/leyaHatoum.png" />
   <title>Leya Hatoum</title>
 </head>
 
@@ -36,6 +48,7 @@
       </ul>
     </nav>
     <div 
+      id="top"
       data-aos="fade-up"
       data-aos-offset="50"
       data-aos-delay="50"
@@ -75,17 +88,20 @@
               target="_blank"
             >Get CV</a>
         </div>
-      </div>
-      <img 
-        data-aos="fade-up"
-        data-aos-offset="50"
-        data-aos-delay="0"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-        class="bio__picture" 
-        src="./assets/leyaHatoum__front.png" 
-        alt="Picture of Leya Hatoum"
-      >
+      </div> 
+      <picture class="bio__picture">
+        <source srcset="./assets/leyaHatoum__front-mob.png" media="(max-width: 550px)">
+        <source srcset="./assets/leyaHatoum__front.png">
+        <img 
+          data-aos="fade-up"
+          data-aos-offset="50"
+          data-aos-delay="0"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          src="./assets/leyaHatoum__front.png" 
+          alt="Picture of Leya Hatoum"
+        >
+      </picture>
     </section>
     <section 
       id="projects" 
@@ -121,7 +137,7 @@
         </div>
         <div class="form--rightItems">
           <label class="visibilityHidden" for="message">Message</label>
-          <textarea rows="3" cols="20" id="message" placeholder="Message"></textarea>
+          <textarea name="message" rows="3" cols="20" id="message" placeholder="Message"></textarea>
         </div>
         <div class="form--bottom">
           <label class="visibilityHidden" for="submit">Send Message</label>
@@ -132,14 +148,14 @@
   </main>
 
   <footer class="footer">
-    <p class="footer__siteCredit">Site created by me</p>
+    <p class="footer__siteCredit">Site by Leya Hatoum</p>
     <div class="footer__socialMedia">
       <a href="https://linkedin.com/in/leya-hatoum-404726122/"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://twitter.com/leyahatoum"><i class="fab fa-twitter"></i></a>
       <a href="https://medium.com/@leyahatoum10"><i class="fab fa-medium-m"></i></a>
       <a href="https://github.com/LeyaHatoum"><i class="fab fa-github"></i></a>
     </div>
-<p class="footer__photoCredit">Photo credit goes to <a class="footer__photoCredit--link" href="https://pamlau.com/" target="_blank">Pam Lau</a></p>
+<p class="footer__photoCredit">Picture by <a class="footer__photoCredit--link" href="https://pamlau.com/" target="_blank">Pam Lau</a></p>
   </footer>
 
   <script 

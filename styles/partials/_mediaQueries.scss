@@ -21,6 +21,7 @@
 
     &__picture {
       width: 50%;
+      transform: translate(0px, 0px);
     }
   }
 
@@ -206,12 +207,12 @@
     }
 
     &--show {
-      visibility: hidden;
+      display: none;
     }
   }
 
   .skills {
-    img {
+    svg {
       display: none;
     }
 
